@@ -1,0 +1,622 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sterzl – Garten- und Landschaftsbau in Rosenheim & Umgebung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- EINZIGER sticky & responsiver Header -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Start">
+        <div class="logo-box">
+          <!-- Logo-Datei anpassen -->
+          <img src="logo.jpg" alt="Sterzl Garten- und Landschaftsbau Logo">
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Hauptmenü">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#kundenmeinungen">Kundenmeinungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#standort">Standort</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn" href="https://wa.me/4917631349555" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <!-- WhatsApp Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M16 .396C7.2.396.005 7.59.005 16.396c0 2.887.758 5.704 2.204 8.188L.11 31.927l7.558-2.047a15.82 15.82 0 0 0 8.332 2.316h.006c8.8 0 15.994-7.193 15.994-16 0-4.266-1.66-8.272-4.672-11.283C24.272 2.056 20.266.396 16 .396Zm0 29.084c-2.652 0-5.238-.713-7.488-2.063l-.537-.318-4.488 1.214 1.195-4.367-.35-.551a13.32 13.32 0 0 1-2.037-7.104c0-7.34 5.973-13.313 13.313-13.313 3.555 0 6.89 1.387 9.404 3.9 2.514 2.52 3.896 5.854 3.896 9.409 0 7.34-5.973 13.313-13.313 13.313Zm7.285-9.947c-.398-.2-2.355-1.16-2.72-1.293-.365-.136-.632-.2-.9.2-.265.398-1.032 1.293-1.265 1.558-.232.265-.465.298-.863.099-.398-.2-1.68-.62-3.197-1.976-1.18-1.05-1.977-2.352-2.21-2.75-.232-.398-.025-.613.175-.813.18-.18.398-.465.598-.698.2-.232.265-.398.398-.664.132-.265.066-.498-.033-.698-.1-.2-.9-2.166-1.233-2.966-.324-.78-.654-.673-.9-.685-.232-.012-.498-.015-.765-.015-.265 0-.698.1-1.065.498-.365.398-1.398 1.367-1.398 3.332s1.432 3.863 1.632 4.132c.2.265 2.816 4.297 6.82 6.028.954.412 1.7.66 2.28.844.957.305 1.828.262 2.516.159.768-.114 2.355-.961 2.688-1.889.332-.928.332-1.722.232-1.889-.1-.166-.365-.265-.764-.465Z"/>
+          </svg>
+          WhatsApp
+        </a>
+        
+        <a class="btn" href="tel:+4917631349555" aria-label="Anrufen">
+          <!-- Telefon Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.49a1 1 0 0 1 1 1c0 1.22.2 2.42.57 3.56a1 1 0 0 1-.24 1.02l-2.2 2.21z"/>
+          </svg>
+          Anrufen
+        </a>
+      </div>
+
+      <button class="burger" aria-label="Menü öffnen" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <section class="hero" id="top" aria-label="Hero">
+    <!-- Hintergrundvideo (falls vorhanden; sonst Bild einsetzen) -->
+    <video class="hero__video"
+           autoplay
+           muted
+           playsinline
+           preload="metadata">
+      <source src="hero-portrait.webm" type="video/webm" media="(max-width: 600px)">
+      <source src="hero-portrait.mp4"  type="video/mp4"  media="(max-width: 600px)">
+      <source src="hero.webm" type="video/webm" media="(min-width: 601px)">
+      <source src="hero.mp4"  type="video/mp4"  media="(min-width: 601px)">
+      Dein Browser unterstützt kein HTML5-Video.
+    </video>
+  
+    <!-- Text über dem Video -->
+    <div class="hero__inner">
+      <h1 class="hero__title"> Ihr Partner im Gartenbau</h1>
+      <div class="hero__actions">
+        <a href="#kontakt" class="btn-primary">Jetzt anfragen →</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="first-text" aria-label="Einführung">
+    <div class="first-text__inner">
+      <h2 class="first-text__title">
+        SIE HABEN EINEN GARTEN? WIR DEN GRÜNEN DAUMEN!
+      </h2>
+  
+      <p class="first-text__text">
+        Wir freuen uns, Sie auf unserer Firmenhomepage begrüßen zu dürfen. Sehen Sie sich um,
+        lernen Sie uns und unser Angebot kennen. Erfahren Sie, wie unser qualifiziertes Personal
+        Ihnen mit seiner langjährigen Erfahrung helfen kann, und genießen Sie Ihren „neuen“ Garten,
+        nachdem wir daraus eine Wohlfühloase gemacht haben. Was auch immer Ihr Anliegen ist,
+        sprechen Sie uns einfach an. Wir sind von Sonnenauf- bis Sonnenuntergang für Sie erreichbar.
+      </p>
+    </div>
+  </section>
+  
+  
+
+  <!-- LEISTUNGS-ÜBERSICHT -->
+  <section id="leistungen" class="services" aria-label="Unsere Leistungen">
+    <div class="container">
+      <header class="services__header">
+        <h2>Leistungen</h2>
+      </header>
+
+      <div class="grid grid-2">
+        <!-- Pflaster -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/pflaster.jpg" alt="Pflasterarbeiten Einfahrt und Wege">
+          </figure>
+          <div class="card-body">
+            <h3>Pflasterarbeiten</h3>
+            <p>
+              Ob Einfahrt, Hof, Stellplatz oder Gehweg – wir verlegen Pflasterflächen fachgerecht,
+              langlebig und optisch passend zu Ihrem Haus. Von der Untergrundvorbereitung über den
+              Aufbau der Tragschichten bis zur sauberen Verfugung erhalten Sie alles aus einer Hand.
+              So entstehen Flächen, die sowohl optisch überzeugen als auch dauerhaft belastbar sind.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+
+        <!-- Mauern -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/mauern.jpg" alt="Gartenmauern und Stützmauern">
+          </figure>
+          <div class="card-body">
+            <h3>Mauern</h3>
+            <p>
+              Stützmauern, Hangabfangungen oder dekorative Gartenmauern – wir planen und bauen
+              Mauerwerke, die technische Anforderungen erfüllen und Ihren Außenbereich optisch aufwerten.
+              Dabei achten wir auf einen stabilen Aufbau, eine saubere Ausführung der Fugen und ein
+              harmonisches Gesamtbild im Zusammenspiel mit Pflaster, Haus und Bepflanzung.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+
+        <!-- Terrassen -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/terrassen.jpg" alt="Terrassenbau im Garten">
+          </figure>
+          <div class="card-body">
+            <h3>Terrassen</h3>
+            <p>
+              Ihre Terrasse ist der Wohnbereich im Freien – entsprechend sorgfältig planen und bauen wir sie.
+              Wir erstellen den tragfähigen Unterbau, legen das richtige Gefälle an und verlegen Platten
+              oder Pflaster präzise. So entsteht eine pflegeleichte, ebene Fläche, die viele Jahre Freude macht
+              und sich optimal an Haus und Garten anfügt.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+
+        <!-- Entwässerungsarbeiten -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/entwaesserung.jpg" alt="Entwässerungsarbeiten im Außenbereich">
+          </figure>
+          <div class="card-body">
+            <h3>Entwässerungsarbeiten</h3>
+            <p>
+              Staunässe, Pfützenbildung oder Wasser am Hausfundament sind ein häufiges Problem.
+              Wir planen und installieren Entwässerungsrinnen, Drainagen und passende Gefälle,
+              damit Regenwasser kontrolliert abläuft. So schützen Sie Gebäude, Flächen und Bepflanzung
+              und sorgen dauerhaft für trockene, sichere Außenbereiche.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+
+        <!-- Erd- und Rasenbau -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/erd_rasen.jpg" alt="Erdarbeiten und Rasenbau im Garten">
+          </figure>
+          <div class="card-body">
+            <h3>Erd- & Rasenbau</h3>
+            <p>
+              Vom Rohgelände zur fertigen Grünfläche: Wir modellieren das Gelände, bringen Oberboden ein
+              und bereiten die Fläche für Rollrasen oder Rasensaat vor. Dabei achten wir auf die richtige
+              Bodenbeschaffenheit und einen ebenen, nutzbaren Gartenbereich – egal ob Neubaugrundstück
+              oder bestehender Garten, der neu strukturiert werden soll.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+
+        <!-- Pflanzen & Pflegearbeiten -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/pflanzen_pflege.jpg" alt="Pflanz- und Pflegearbeiten im Garten">
+          </figure>
+          <div class="card-body">
+            <h3>Pflanzen & Pflegearbeiten</h3>
+            <p>
+              Die passende Bepflanzung verleiht Ihrem Garten Charakter. Wir wählen Stauden, Sträucher
+              und Bäume abgestimmt auf Standort, Boden und Ihre Wünsche aus und setzen diese fachgerecht.
+              Auf Wunsch übernehmen wir auch regelmäßige Pflegearbeiten, damit Ihre Anlage dauerhaft gepflegt
+              bleibt und sich die Pflanzen optimal entwickeln können.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+
+        <!-- Baumschnitt -->
+        <article class="card service">
+          <figure class="card-media">
+            <img src="assets/leistungen/baumschnitt.jpg" alt="Baumschnitt und Kronenpflege">
+          </figure>
+          <div class="card-body">
+            <h3>Baumschnitt</h3>
+            <p>
+              Regelmäßiger und fachgerechter Baumschnitt sorgt für Verkehrssicherheit, gesunde Kronen
+              und ein gepflegtes Erscheinungsbild. Wir schneiden Bäume und Gehölze so, dass sie ihre
+              natürliche Form behalten, abgestorbene Äste entfernt werden und der Baum langfristig stabil
+              und vital bleibt – inklusive sauberer Entsorgung des Schnittguts.
+            </p>
+            <div class="card-cta"><a class="btn-primary" href="#kontakt">Anfrage stellen →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+ <!-- KUNDENMEINUNGEN -->
+<section id="kundenmeinungen" class="testimonials" aria-label="Kundenmeinungen">
+  <div class="container">
+    <h2 class="testimonials-title">KUNDENMEINUNGEN</h2>
+
+    <div class="testimonials-grid">
+      <!-- 1 -->
+      <article class="testimonial-card is-visible">
+        <div class="stars">★★★★★</div>
+        <p>
+          Kompetent, freundlich und fleißig – wir werden ihn im Frühling auf jeden Fall wieder beauftragen.
+        </p>
+        <span class="author">Kimmerle M.</span>
+      </article>
+
+      <!-- 2 -->
+      <article class="testimonial-card is-visible">
+        <div class="stars">★★★★★</div>
+        <p>
+          Zuverlässige, genaue Arbeit, sehr kompetent und eine gute Kommunikation bei fairem Preis.
+        </p>
+        <span class="author">Fath M.</span>
+      </article>
+
+      <!-- 3 -->
+      <article class="testimonial-card is-visible">
+        <div class="stars">★★★★★</div>
+        <p>
+          Sehr gute und saubere Arbeit, Termin wie vereinbart eingehalten – absolut empfehlenswert.
+        </p>
+        <span class="author">Patrick B.</span>
+      </article>
+
+      <!-- 4 -->
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Schnelles Angebot und die Arbeiten wurden innerhalb weniger Tage zu unserer vollen Zufriedenheit erledigt.
+        </p>
+        <span class="author">Milovan K.</span>
+      </article>
+
+      <!-- 5 -->
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Sehr sorgfältiger Baumschnitt und Gartenpflege, alles wurde ordentlich hinterlassen.
+        </p>
+        <span class="author">Thomas O.</span>
+      </article>
+
+      <!-- 6 -->
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Transparenter Kostenvoranschlag, saubere Ausführung und termingerechte Fertigstellung – top Ergebnis.
+        </p>
+        <span class="author">Christian G.</span>
+      </article>
+
+      <!-- 7 -->
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Der Rasen und die Flächen wurden schnell und ordentlich bearbeitet – wir sind sehr zufrieden.
+        </p>
+        <span class="author">Matthias B.</span>
+      </article>
+
+      <!-- 8 -->
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Heckenschnitt, Obstbäume und Rasen – alles wurde zügig und sauber erledigt, genau wie besprochen.
+        </p>
+        <span class="author">Anja S.</span>
+      </article>
+
+      <!-- 9 -->
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Sehr gewissenhafte Arbeit, besonders beim Baumschnitt – vielen Dank für den tollen Einsatz.
+        </p>
+        <span class="author">Ulrike A.</span>
+      </article>
+    </div>
+
+    <div class="testimonials-nav" aria-label="Bewertungen wechseln">
+      <button class="testimonials-prev" type="button" aria-label="Vorherige Bewertungen">‹</button>
+      <button class="testimonials-next" type="button" aria-label="Nächste Bewertungen">›</button>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = Array.from(document.querySelectorAll(".testimonial-card"));
+    const visibleCount = 3;
+    let startIndex = 0;
+  
+    const prevBtn = document.querySelector(".testimonials-prev");
+    const nextBtn = document.querySelector(".testimonials-next");
+  
+    if (!cards.length) return;
+  
+    function showCards() {
+      cards.forEach(card => card.classList.remove("is-visible"));
+  
+      for (let i = 0; i < visibleCount; i++) {
+        const idx = (startIndex + i) % cards.length;
+        cards[idx].classList.add("is-visible");
+      }
+    }
+  
+    function next() {
+      startIndex = (startIndex + visibleCount) % cards.length;
+      showCards();
+    }
+  
+    function prev() {
+      // immer in Dreierblöcken zurückspringen
+      startIndex = (startIndex - visibleCount) % cards.length;
+      if (startIndex < 0) startIndex += cards.length;
+      showCards();
+    }
+  
+    // Initial anzeigen
+    showCards();
+  
+    // Auto-Slide alle 3 Sekunden
+    let autoplay = setInterval(next, 3000);
+  
+    function resetAutoplay() {
+      clearInterval(autoplay);
+      autoplay = setInterval(next, 3000);
+    }
+  
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        next();
+        resetAutoplay();
+      });
+    }
+  
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        prev();
+        resetAutoplay();
+      });
+    }
+  });
+  </script>
+  
+
+  <section class="about-text" aria-label="Elias Sterzl Gartenbau">
+    <div class="container">
+  
+      <h2 class="about-text__title">
+        ELIAS STERZL GARTENBAU<br>
+        IHR EXPERTE FÜR<br>
+        ROSENHEIM + 50 KM
+      </h2>
+  
+      <p class="about-text__body">
+        Herzlich willkommen bei Ihrem Experten für Gartenbau in Rosenheim und Umgebung. Ich bin Elias Sterzl,
+        Landschaftsgärtner und staatlich geprüfter Wirtschafter für Gartenbau, und gemeinsam mit meinem Team
+        realisiere ich hochwertige Gartenprojekte mit Fachwissen, Präzision und echter Leidenschaft für grüne
+        Lebensräume. Nach mehreren Jahren Praxiserfahrung und zahlreichen erfolgreich abgeschlossenen Baustellen
+        habe ich mein eigenes Unternehmen gegründet, um individuelle Gartenlösungen anzubieten, die durch Qualität,
+        Ästhetik und Langlebigkeit überzeugen. Wir verstehen, dass ein Garten nicht nur eine Fläche ist, sondern ein
+        Ort, an dem Sie sich wohlfühlen, entspannen und Ihre Lebensqualität steigern möchten. Genau darauf richten wir
+        unsere Arbeit aus: Wir verwandeln Ihre Wünsche und Ideen in funktionale, harmonische und nachhaltige
+        Gartenbereiche. Unser Leistungsspektrum umfasst professionelle Pflasterarbeiten, Terrassenbau, Mauern,
+        Entwässerungsarbeiten, Erd- und Rasenbau, Pflanzen- und Pflegearbeiten sowie fachgerechten Baumschnitt –
+        alles aus einer Hand und individuell auf Ihr Grundstück abgestimmt. Von der ersten Beratung bis zur finalen
+        Umsetzung stehen mein Team und ich Ihnen als kompetenter Partner zur Seite. Wir legen großen Wert auf eine
+        saubere Ausführung, klare Kommunikation und eine ganzheitliche Betrachtung Ihres Gartens. Dank unserer
+        regionalen Erfahrung kennen wir die Boden- und Standortbedingungen in Rosenheim und der Umgebung genau und
+        passen unsere Konzepte optimal an diese Gegebenheiten an. Vertrauen Sie auf Elias Sterzl Gartenbau, wenn Sie
+        einen zuverlässigen und qualifizierten Gartenbauer suchen, der Ihr Projekt mit Engagement, Fachkenntnis und
+        einem hohen Qualitätsanspruch umsetzt. Gemeinsam gestalten wir eine grüne Oase, die Ihre Vorstellungen nicht
+        nur erfüllt, sondern übertrifft. Kontaktieren Sie uns gerne, um die Möglichkeiten für Ihr persönliches
+        Gartenprojekt zu besprechen – wir freuen uns darauf, Ihre Vision zum Leben zu erwecken.
+      </p>
+  
+    </div>
+  </section>
+  
+  <!-- HERO WIE AGA -->
+<section class="hero hero-aga" id="aga-hero" aria-label="Hero">
+
+  <!-- Hintergrundbild -->
+  <div class="hero-aga__bg">
+    <img src="assets/hero/hero-villa.jpg" alt="Moderner Garten und Terrasse">
+  </div>
+
+  <!-- OVERLAY (muss ÜBER dem Bild liegen!) -->
+  <div class="hero-aga__shade"></div>
+
+  <!-- Inhalt -->
+  <div class="hero-aga__inner">
+    <h1 class="hero-aga__title">
+      ENTDECKEN SIE DIE GRENZENLOSEN<br>
+      MÖGLICHKEITEN FÜR IHREN TRAUMGARTEN
+    </h1>
+
+    <p class="hero-aga__lead">
+      Wir sind Ihre Experten für Gartenbau in Rosenheim und Umgebung.
+      Möchten Sie einen gepflegten Garten, der Ihre Sinne verzaubert, oder eine moderne Terrasse,
+      die zum Verweilen einlädt? Wir stehen Ihnen mit Erfahrung und Leidenschaft für
+      anspruchsvolle Gartengestaltung zur Seite. Kontaktieren Sie uns jetzt, um gemeinsam
+      Ihre grünen Träume Realität werden zu lassen. Ihr perfekter Garten ist nur einen Klick entfernt!
+    </p>
+
+    <div class="hero-aga__actions">
+      <a href="#kontakt" class="btn-primary">Jetzt anfragen →</a>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- STANDORT -->
+<section id="standort" class="map-section">
+  <div class="map-container">
+    <iframe
+      width="100%"
+      height="450"
+      style="border:0; filter: grayscale(100%) contrast(1.2) brightness(0.7);"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.753356086469!2d12.135807!3d47.8560946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775a0efb8c1d9c7%3A0x44fa58d0b1ee0c5!2s%C3%84u%C3%9Fere%20M%C3%BCnchener%20Str.%2078%2C%2083026%20Rosenheim!5e0!3m2!1sde!2sde!4v1700000000000">
+    </iframe>
+  </div>
+</section>
+  
+
+
+<section class="nearby">
+  <div class="nearby-inner">
+    <h2 class="nearby-title">Ganz in Ihrer Nähe</h2>
+
+    <p class="nearby-address">
+      Äußere Münchener Straße 78, 83026 Rosenheim
+    </p>
+
+    <p class="nearby-text">
+      Wir freuen uns über Ihre Kontaktaufnahme und garantieren individuelle Kundenbetreuung.
+    </p>
+
+    <a href="#kontakt" class="btn-primary nearby-btn">Jetzt anfragen →</a>
+  </div>
+</section>
+
+
+<section id="kontakt" class="contact" aria-label="Kontakt">
+  <div class="container">
+    <h2 class="contact__title">Kontakt</h2>
+    <p class="contact__lead">
+      Kurz Ihr Projekt schildern – wir melden uns zeitnah mit Rückfragen oder einem ersten Vorschlag.
+    </p>
+
+    <form
+      id="contactForm"
+      class="contact__form"
+      action="https://formspree.io/f/mvgeboqr"
+      method="POST"
+      novalidate
+    >
+      <!-- Honeypot -->
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <!-- Betreff für die E-Mail -->
+      <input type="hidden" name="_subject" value="Neue Gartenbau-Anfrage über Website">
+
+      <!-- Erfolgsnachricht -->
+      <div id="formSuccess" class="contact-success" style="display:none;">
+        ✔️ Ihre Nachricht wurde erfolgreich gesendet! Sie werden gleich weitergeleitet …
+      </div>
+
+      <div class="field">
+        <input type="text" name="name" placeholder="Vorname, Nachname" required>
+      </div>
+
+      <div class="field">
+        <input type="text" name="address" placeholder="Adresse (optional)">
+      </div>
+
+      <div class="field">
+        <input type="tel" name="phone" placeholder="Telefonnummer" required>
+      </div>
+
+      <div class="field">
+        <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+      </div>
+
+      <div class="field">
+        <textarea name="message" rows="6" placeholder="Ihr Anliegen hier eingeben" required></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-primary">Absenden</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  const res = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { "Accept": "application/json" }
+  });
+
+  if (res.ok) {
+    form.reset();
+
+    const successBox = document.getElementById("formSuccess");
+    successBox.style.display = "block";
+
+    // nach 3 Sekunden zur Startseite
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 3000);
+  }
+});
+</script>
+
+
+
+  <footer>
+    <div class="footer-inner">
+      <nav class="links" aria-label="Rechtliches">
+        <a href="Impressum.html">Impressum</a>
+        <a href="Datenschutzerklärung.html">Datenschutz</a>
+      </nav>
+      <div class="copyright">© 2025 Elias Sterzl &amp; Imanuel Sterzl GbR</div>
+    </div>
+  </footer>
+
+  <script>
+    // Intro-Animation
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
+
+    // Burger-Menü
+    const burger = document.querySelector('.burger');
+    const links = document.querySelector('.nav-links');
+    if (burger && links){
+      const toggle = () => {
+        const isOpen = links.classList.toggle('open');
+        burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      };
+      burger.addEventListener('click', toggle);
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      }));
+    }
+  </script>
+
+  <!-- Donut-Animation nur, falls du Donut-Elemente verwendest -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const donuts = document.querySelectorAll('.donut');
+    
+      const setDonut = (el, perc) => {
+        const circle = el.querySelector('.bar');
+        const total = 326; // Dasharray
+        const offset = total * (1 - perc / 100);
+        circle.style.strokeDashoffset = offset;
+        const label = el.querySelector('.percent');
+        if (label) label.textContent = perc + '%';
+      };
+    
+      donuts.forEach(el => setDonut(el, 0));
+    
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting){
+            const el = entry.target;
+            const perc = parseInt(el.dataset.perc, 10) || 0;
+            setTimeout(() => setDonut(el, perc), 120);
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.35 });
+    
+      donuts.forEach(el => io.observe(el));
+    });
+  </script>
+</body>
+</html>
