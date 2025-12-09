@@ -84,8 +84,8 @@ main{
   text-decoration:none;
   opacity:1;
   font-weight:800;
-  font: size 10px;
-  line-height:1;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 /* CTAs */
@@ -173,7 +173,7 @@ main{
   .nav-links a{
     display:inline-block; padding:0;
     color:#fff; opacity:1; text-decoration:none;
-    font-weight:800; font-size:12px; line-height:1.2;
+    font-weight:800; font-size:20px; line-height:1.2;
   }
 }
 
@@ -929,4 +929,80 @@ p {
   opacity: 0.95;
   max-width: 850px;
   margin: 0 auto;
+}
+
+
+/* S-Linie auf Mobile ausblenden */
+@media (max-width: 900px){
+  .s-line{
+    display: none;
+  }
+}
+
+/* === MOBILE TWEAKS (Abstände) === */
+@media (max-width: 900px){
+
+  /* Hero etwas kompakter auf Handy */
+  .hero {
+    min-height: calc(100svh - var(--nav-h));
+  }
+
+  /* Testimonials: nicht so fettes Padding */
+  .testimonials {
+    padding: 80px 20px;
+  }
+
+  /* Nearby (Ganz in Ihrer Nähe): weniger Luft */
+  .nearby {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 768px){
+
+  /* About-Text Block: oben nicht ganz so riesig */
+  .about-text {
+    padding: 120px 20px 40px;
+  }
+
+  /* First-Text-Block: auf Mobile entspannter */
+  .first-text {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+
+
+/* === MOBILE TYPO TWEAKS === */
+@media (max-width: 768px){
+
+  /* Hero-Headline etwas kleiner & entspannter */
+  .hero__title{
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.15;
+  }
+
+  /* Intro-Text: mehr Zeilenabstand, besser lesbar */
+  .intro__text{
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* About-Text-Body: auf Handy etwas kleiner */
+  .about-text__body{
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  /* Testimonials-Text: nicht so gedrückt */
+  .testimonial-card p{
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* First-Text-Block: Text auf Handy minimal kleiner */
+  .first-text__text{
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
 }
