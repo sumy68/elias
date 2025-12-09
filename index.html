@@ -505,57 +505,46 @@
   </div>
 </section>
 
-
 <section id="kontakt" class="contact" aria-label="Kontakt">
   <div class="container">
     <h2 class="contact__title">Kontakt</h2>
     <p class="contact__lead">
-      Kurz Ihr Projekt schildern – wir melden uns zeitnah mit Rückfragen oder einem ersten Vorschlag.
+      Bereit für die Verwirklichung Ihrer Ideen? Teilen Sie uns kurz Ihr Vorhaben mit –
+      wir melden uns zeitnah zurück.
     </p>
 
-    <form
-      id="contactForm"
-      class="contact__form"
-      action="https://formspree.io/f/mvgeboqr"
-      method="POST"
-      novalidate
-    >
-      <!-- Honeypot -->
-      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-      <!-- Betreff für die E-Mail -->
-      <input type="hidden" name="_subject" value="Neue Gartenbau-Anfrage über Website">
-
-      <!-- Erfolgsnachricht -->
-      <div id="formSuccess" class="contact-success" style="display:none;">
-        ✔️ Ihre Nachricht wurde erfolgreich gesendet! Sie werden gleich weitergeleitet …
-      </div>
-
+    <form class="contact__form" id="contactForm" action="https://formspree.io/f/mvgeboqr" method="POST" novalidate>
+      <!-- Honeypot (Spamschutz) -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+    
+      <!-- Optional: Betreff für die eingehende Mail -->
+      <input type="hidden" name="_subject" value="Neue Anfrage über ci-dienstleistungen.com">
+    
       <div class="field">
         <input type="text" name="name" placeholder="Vorname, Nachname" required>
       </div>
-
+    
       <div class="field">
         <input type="text" name="address" placeholder="Adresse (optional)">
       </div>
-
+    
       <div class="field">
-        <input type="tel" name="phone" placeholder="Telefonnummer" required>
+        <input type="tel" name="phone" placeholder="Telefonnummer (optional)" pattern="^[0-9+()\/\s-]{6,}$">
       </div>
-
+    
       <div class="field">
         <input type="email" name="email" placeholder="E-Mail-Adresse" required>
       </div>
-
+    
       <div class="field">
         <textarea name="message" rows="6" placeholder="Ihr Anliegen hier eingeben" required></textarea>
       </div>
-
+    
       <div class="actions">
         <button type="submit" class="btn-primary">Absenden</button>
       </div>
     </form>
-  </div>
+    
 </section>
 
 <script>
@@ -576,11 +565,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     const successBox = document.getElementById("formSuccess");
     successBox.style.display = "block";
-
-    // nach 3 Sekunden zur Startseite
-    setTimeout(() => {
-      window.location.href = "index.html";
-    }, 3000);
   }
 });
 </script>
