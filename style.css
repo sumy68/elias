@@ -11,14 +11,16 @@
 }
 
 /* Basis */
-html, body { height: 100%; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body{
-  background:var(--green);
-  color:var(--text);
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  display:flex; min-height:100svh; flex-direction:column;
+html, body {
+  height: 100%;
+  overflow-x: hidden;  /* NEU: verhindert horizontales Scrollen */
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 main{ flex:1 0 auto; }
 
 body{
@@ -124,6 +126,9 @@ main{
   width:40px;
   height:40px;
   cursor:pointer;
+
+  position: relative;
+  z-index: 1100;   /* ✅ höher als Menü */
 }
 .burger span,
 .burger::before,
@@ -144,16 +149,26 @@ main{
   .nav-cta{ display:none; }
 
   .nav-links{
-    position: fixed; inset: 0 0 0 auto; width: min(78vw, 320px);
+    position: fixed;
+    top: 0;
+    right: -100%;                 /* komplett rechts raus schieben */
+    bottom: 0;
+    width: min(78vw, 320px);
     background: var(--green-footer);
-    display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
-    padding: 96px 20px 24px; gap: 6px;
-    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 96px 20px 24px;
+    gap: 6px;
     box-shadow: -6px 0 18px rgba(0,0,0,.35);
-    transition: transform .35s cubic-bezier(.2,.8,.2,1);
-    z-index: 999;
+    transition: right .35s cubic-bezier(.2,.8,.2,1);
+    z-index: 1000;
   }
-  .nav-links.open{ transform: translateX(0); }
+
+  .nav-links.open{
+    right: 0;                      /* beim Öffnen reinsliden */
+  }
 
   .nav-links a{
     display:block; width:100%; padding:12px 10px;
@@ -161,20 +176,6 @@ main{
     font-weight:800; font-size:17px; line-height:1.2; border-radius:10px;
   }
   .nav-links a:hover{ background: rgba(255,255,255,.06); }
-}
-
-@media (min-width:1025px){
-  .nav-links{
-    position: static;
-    display: flex; flex-direction: row; align-items: center; justify-content: center;
-    gap: clamp(20px, 3vw, 32px); padding: 0; width: auto;
-    transform: none; box-shadow: none; background: transparent;
-  }
-  .nav-links a{
-    display:inline-block; padding:0;
-    color:#fff; opacity:1; text-decoration:none;
-    font-weight:800; font-size:20px; line-height:1.2;
-  }
 }
 
 /* Scroll-Offset für Anker */
@@ -1004,5 +1005,42 @@ p {
   .first-text__text{
     font-size: 0.98rem;
     line-height: 1.7;
+  }
+}
+@media (max-width:1024px){
+  .nav-links{
+    pointer-events: none;
+  }
+  .nav-links.open{
+    pointer-events: auto;
+  }
+}
+body.menu-open{
+  overflow: hidden;
+}
+
+/* === DESKTOP-NAVIGATION (ab 1025px) === */
+@media (min-width:1025px){
+  .nav-links{
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 32px);
+    padding: 0;
+    width: auto;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .nav-links a{
+    display: inline-block;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 1.2;
   }
 }
