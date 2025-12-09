@@ -886,14 +886,19 @@ p {
   margin-top: 100px;   /* oder 60px, wenn dir das zu viel ist */
 }
 
-/* ===== FIRST TEXT SECTION (AGA Style) ===== */
 .first-text {
-  padding: 12cm 100px;                /* 5cm oben + unten */
-  background: var(--green);         /* gleicher Hintergrund wie bei AGA */
+  padding-top: clamp(220px, 30vw, 360px);
+  padding-bottom: clamp(80px, 14vw, 140px);
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--green);
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
+
+
 
 .first-text__inner {
   max-width: 950px;
