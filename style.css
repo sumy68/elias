@@ -1044,3 +1044,17 @@ body.menu-open{
     line-height: 1.2;
   }
 }
+
+.hero__video{
+  pointer-events: none;     /* nichts anklickbar */
+  user-select: none;
+}
+
+/* Safari / iOS: Play-Overlay entfernen */
+.hero__video::-webkit-media-controls,
+.hero__video::-webkit-media-controls-start-playback-button,
+.hero__video::-webkit-media-controls-enclosure {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
