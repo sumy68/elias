@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- EINZIGER sticky & responsiver Header -->
+  
+
+
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="#top" aria-label="Start">
         <div class="logo-box">
-          <!-- Logo-Datei anpassen -->
           <img src="logo.jpg" alt="Sterzl Garten- und Landschaftsbau Logo">
         </div>
       </a>
-
+  
       <nav class="nav-links" aria-label="Hauptmenü">
         <a href="#leistungen">Leistungen</a>
         <a href="#kundenmeinungen">Kundenmeinungen</a>
@@ -25,7 +26,8 @@
         <a href="#standort">Standort</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
-
+  
+      <!-- DESKTOP-CTAs -->
       <div class="nav-cta">
         <a class="btn" href="https://wa.me/4917631349555" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <!-- WhatsApp Icon -->
@@ -43,11 +45,21 @@
           Anrufen
         </a>
       </div>
-
+  
+      <!-- 🔥 Mobile Call Button separat -->
+      <a class="btn mobile-header-call" href="tel:+4917631349555" aria-label="Anrufen">
+        <!-- Telefon Icon (gleich wie Desktop) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.49a1 1 0 0 1 1 1c0 1.22.2 2.42.57 3.56a1 1 0 0 1-.24 1.02l-2.2 2.21z"/>
+        </svg>
+        <span>Anrufen</span>
+      </a>
+      
+  
       <button class="burger" aria-label="Menü öffnen" aria-expanded="false"><span></span></button>
     </div>
   </header>
-
+  
   <section class="hero" id="top" aria-label="Hero">
     <!-- Hintergrundvideo (falls vorhanden; sonst Bild einsetzen) -->
     <video class="hero__video"

@@ -55,11 +55,13 @@ main{
 
 /* ===== HEADER ===== */
 .site-header{
-  position: sticky; top: 0; z-index: 1000;
-  background: rgba(15,36,22,0.95);
-  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--green-footer); /* dunkler */
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
+
 .nav-wrap{
   max-width: 1200px; margin: 0 auto;
   padding: 0 24px;
@@ -1093,3 +1095,27 @@ body.menu-open{
   color: #f0f0f0 !important;
 }
 
+/* Standard: Desktop -> Button ausblenden */
+.mobile-header-call {
+  display: none;
+}
+
+/* Mobile: Button anzeigen + layouten */
+@media (max-width:1024px){
+  .mobile-header-call {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 12px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .nav-cta {
+    display: none !important;
+  }
+
+  .nav-wrap {
+    grid-template-columns: auto auto auto; /* Logo | Call | Burger */
+  }
+}
