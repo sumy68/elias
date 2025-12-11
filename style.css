@@ -1057,4 +1057,39 @@ body.menu-open{
   display: none !important;
   -webkit-appearance: none;
 }
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social a svg {
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover svg {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+.links a {
+  margin: 0 8px;
+}
+.footer-social a svg {
+  width: 50px;
+  height: 50px;
+}
+
+/* Telefonnummer im Impressum weiß machen */
+.contact a[href^="tel:"] {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* optional: Hover-Zustand leicht abtönen */
+.contact a[href^="tel:"]:hover {
+  color: #f0f0f0 !important;
+}
 
