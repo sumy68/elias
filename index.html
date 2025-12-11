@@ -66,14 +66,14 @@
        autoplay
        muted
        playsinline
-       preload="auto"
-       poster="assets/hero/hero-poster.jpg">
-      <source src="hero-portrait.webm" type="video/webm" media="(max-width: 600px)">
-      <source src="hero-portrait.mp4"  type="video/mp4"  media="(max-width: 600px)">
-      <source src="hero.webm" type="video/webm" media="(min-width: 601px)">
-      <source src="hero.mp4"  type="video/mp4"  media="(min-width: 601px)">
-      Dein Browser unterstützt kein HTML5-Video.
-    </video>
+       preload="auto">
+  <source src="hero-portrait.webm" type="video/webm" media="(max-width: 600px)">
+  <source src="hero-portrait.mp4"  type="video/mp4"  media="(max-width: 600px)">
+  <source src="hero.webm" type="video/webm" media="(min-width: 601px)">
+  <source src="hero.mp4"  type="video/mp4"  media="(min-width: 601px)">
+  Dein Browser unterstützt kein HTML5-Video.
+</video>
+
   
     <!-- Text über dem Video -->
     <div class="hero__inner">
@@ -636,5 +636,19 @@ document.getElementById("contactForm").addEventListener("submit", async function
       );
     }
   </script>
+  <script>
+    window.addEventListener("load", function () {
+      const vid = document.querySelector(".hero__video");
+      if (!vid) return;
+      const tryPlay = () => {
+        const p = vid.play();
+        if (p && p.catch) {
+          p.catch(() => {});
+        }
+      };
+      tryPlay();
+    });
+  </script>
+  
 </body>
 </html>
