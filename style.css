@@ -1231,3 +1231,9 @@ footer::before {
   width: 20px;
   height: 20px;
 }
+
+/* E-Mail im Impressum weiß machen */
+.contact a[href^="mailto:"] {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
