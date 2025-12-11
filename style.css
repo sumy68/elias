@@ -862,10 +862,10 @@ footer {
 footer::before {
   content: "";
   position: absolute;
-  top: -80px;
+  top: -50px;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 50px;
   background: #0c1e0f;
   border-top-left-radius: 100% 80px;
   border-top-right-radius: 100% 80px;
@@ -1118,4 +1118,116 @@ body.menu-open{
   .nav-wrap {
     grid-template-columns: auto auto auto; /* Logo | Call | Burger */
   }
+}
+
+/* ===== ELIAS PORTRAIT ===== */
+.elias-portrait {
+  padding: 140px 20px 220px; /* oben genug Abstand zum vorherigen Block, unten genug vor der Footer-Welle */
+  position: relative;
+  z-index: 2;                /* liegt sicher über dem Footer-Wellen-Layer */
+  background: var(--green);
+}
+
+.elias-portrait .container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portrait-title {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.portrait-name {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  opacity: 0.98;
+}
+
+.portrait-text {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  opacity: 0.9;
+}
+
+
+/* Slideshow-Rahmen, feste Höhe damit nichts “springt” */
+.portrait-slideshow {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 3 / 4;   /* stabile Höhe */
+  overflow: hidden;
+}
+
+/* Bilder für Fade-Effekt übereinander legen */
+.portrait-slideshow img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: 12px;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+}
+
+.portrait-slideshow img.active {
+  opacity: 1;
+}
+
+/* Mobile-Tweaks */
+@media (max-width: 768px) {
+  .elias-portrait {
+    padding: 100px 20px 180px;
+  }
+
+  .portrait-text {
+    margin-bottom: 24px;
+  }
+}
+
+/* Footer/Welle bewusst nach hinten */
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+footer::before {
+  z-index: 0;
+}
+
+
+
+.portrait-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 20px 0 36px;
+  flex-wrap: wrap;
+}
+
+.portrait-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.portrait-btn svg {
+  width: 20px;
+  height: 20px;
 }
