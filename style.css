@@ -338,7 +338,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 12px); }
 /* Card-Bild */
 .card-media img{
   width: 100%;
-  aspect-ratio: 4 / 4;
+  aspect-ratio: 4 / 3.5;
   object-fit: cover;
   display: block;
 }
